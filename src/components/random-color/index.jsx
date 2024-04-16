@@ -21,7 +21,7 @@ export default function RandomColor() {
             hexColor += hex[randomColorUtility(hex.length)];
         }
         console.log(hexColor);
-        setColor(hexColor); 
+        setColor(hexColor);
     }
 
     function handleRandomRgbColor() {
@@ -45,23 +45,23 @@ export default function RandomColor() {
             }}>
             <button onClick={() => setTypeOfColor('hex')}>Create HEX color</button>
             <button onClick={() => setTypeOfColor('rgb')}>Create RGB color</button>
-            <button onClick={ typeOfColor === 'hex' 
-            ? handleRandomHexColor 
-            : handleRandomRgbColor}>
+            <button onClick={typeOfColor === 'hex'
+                ? handleRandomHexColor
+                : handleRandomRgbColor}>
                 Generate random color
             </button>
             <div style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  color: "#fff",
-                  fontSize: "60px",
-                  marginTop: "50px",
-                  flexDirection: "column",
-                  gap: "20px ",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "#fff",
+                fontSize: "60px",
+                marginTop: "50px",
+                flexDirection: "column",
+                gap: "20px ",
             }}>
                 <h3>{typeOfColor === 'rgb' ? "RGB Color" : "HEX Color"}</h3>
-                    <h1>{color}</h1>
+                <h1>{color}</h1>
             </div>
         </div>
     );
