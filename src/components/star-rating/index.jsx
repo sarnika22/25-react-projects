@@ -27,7 +27,7 @@ export default function StarRating({ noOfStars = 5 }) {
                 index += 1; //index incremented from 0
                 return (
                     <FaStar
-                        key={index}
+                        key= {index}
                         className={index <= (hover || rating) ? "active" : "inactive"}
                         onClick={() => handleClick(index)}
                         onMouseMove={() => handleMouseEnter(index)}
