@@ -1,6 +1,8 @@
 import './App.css';
+import TreeView from './components/tree-view';
+import menus from './components/tree-view/data';
 //import ImageSlider from './components/image-slider';
-import LoadMore from './components/load-more-data';
+//import LoadMore from './components/load-more-data';
 //import StarRating from './components/star-rating';
 //import Accordion from './components/accordion';
 //import RandomColor from './components/random-color';
@@ -20,7 +22,9 @@ function App() {
       page={'1'}
       limit={'4'}/>*/}
       {/* load more data component */}
-      <LoadMore/>
+      {/*<LoadMore/>*/}
+      {/*Tree view component or menu UI component/>*/}
+      <TreeView menus={menus}/>
     </div>
   );
 }
