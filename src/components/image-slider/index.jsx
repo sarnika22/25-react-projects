@@ -28,6 +28,10 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
       setLoading(false);
     }
   }
+
+  function handleNext() {}
+  function handlePrevious() {}
+
   useEffect(() => {
     if (url !== "") fetchImages(url);
   }, [url]);
@@ -39,7 +43,7 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
   }
   return (
     <div className="container">
-      <BsArrowLeftCircleFill className="arrow arrow-left" />
+      <BsArrowLeftCircleFill onClick={handlePrevious} className="arrow arrow-left" />
       {Images && Images.length
         ? Images.map((imageItem) => (
             <img
@@ -51,8 +55,9 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
           ))
         : null}
         <BsArrowRightCircleFill
+        onClick={handleNext}
         className="arrow arrow-right"/>
-        <span className="cirlce-indicators">
+        <span className="circle-indicators">
           {
             Images && Images.length ? 
             Images.map((_,index) => <button
