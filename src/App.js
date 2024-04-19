@@ -1,6 +1,7 @@
 import './App.css';
-import TreeView from './components/tree-view';
-import menus from './components/tree-view/data';
+import QrCodeGenerator from './components/qr-code-generator';
+//import TreeView from './components/tree-view';
+//import menus from './components/tree-view/data';
 //import ImageSlider from './components/image-slider';
 //import LoadMore from './components/load-more-data';
 //import StarRating from './components/star-rating';
@@ -24,7 +25,9 @@ function App() {
       {/* load more data component */}
       {/*<LoadMore/>*/}
       {/*Tree view component or menu UI component/>*/}
-      <TreeView menus={menus}/>
+      {/*<TreeView menus={menus}/>*/}
+      {/* QR code generator component */}
+      <QrCodeGenerator/>
     </div>
   );
 }
