@@ -1,4 +1,5 @@
 import './App.css';
+import ModalTest from './components/custom-modal-popup/modal-test';
 import TabTest from './components/custom-tabs/tab-test';
 import Tabs from './components/custom-tabs/tabs';
 //import LightDarkMode from './components/light-dark-mode';
@@ -37,8 +38,9 @@ function App() {
       {/* scroll indicator component */}
       {/*<ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>*/}
       {/* custom tab component*/}
-    
-      <TabTest/>  
+      {/*<TabTest/>*/}  
+      {/*custom modal component*/}
+      <ModalTest/>
     </div>
   );
 }
