@@ -1,7 +1,9 @@
 import './App.css';
+import TabTest from './components/custom-tabs/tab-test';
+import Tabs from './components/custom-tabs/tabs';
 //import LightDarkMode from './components/light-dark-mode';
 //import QrCodeGenerator from './components/qr-code-generator';
-import ScrollIndicator from './components/scroll-indicator/indx';
+//import ScrollIndicator from './components/scroll-indicator/indx';
 //import TreeView from './components/tree-view';
 //import menus from './components/tree-view/data';
 //import ImageSlider from './components/image-slider';
@@ -33,7 +35,10 @@ function App() {
       {/*Light & Dark mode component*/}
       {/*<LightDarkMode/>*/}
       {/* scroll indicator component */}
-      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
+      {/*<ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>*/}
+      {/* custom tab component*/}
+    
+      <TabTest/>  
     </div>
   );
 }
