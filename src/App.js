@@ -1,7 +1,8 @@
 import './App.css';
-import ModalTest from './components/custom-modal-popup/modal-test';
-import TabTest from './components/custom-tabs/tab-test';
-import Tabs from './components/custom-tabs/tabs';
+//import ModalTest from './components/custom-modal-popup/modal-test';
+//import TabTest from './components/custom-tabs/tab-test';
+//import Tabs from './components/custom-tabs/tabs';
+import GithubProfileFinder from './components/github-profile-finder';
 //import LightDarkMode from './components/light-dark-mode';
 //import QrCodeGenerator from './components/qr-code-generator';
 //import ScrollIndicator from './components/scroll-indicator/indx';
@@ -40,7 +41,9 @@ function App() {
       {/* custom tab component*/}
       {/*<TabTest/>*/}  
       {/*custom modal component*/}
-      <ModalTest/>
+      {/*<ModalTest/>*/}
+      {/*github profile finder component*/}
+      <GithubProfileFinder/>
     </div>
   );
 }
