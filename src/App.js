@@ -1,8 +1,9 @@
 import './App.css';
+import SearchAutoComplete from './components/search-autocomplete';
 //import ModalTest from './components/custom-modal-popup/modal-test';
 //import TabTest from './components/custom-tabs/tab-test';
 //import Tabs from './components/custom-tabs/tabs';
-import GithubProfileFinder from './components/github-profile-finder';
+//import GithubProfileFinder from './components/github-profile-finder';
 //import LightDarkMode from './components/light-dark-mode';
 //import QrCodeGenerator from './components/qr-code-generator';
 //import ScrollIndicator from './components/scroll-indicator/indx';
@@ -43,7 +44,9 @@ function App() {
       {/*custom modal component*/}
       {/*<ModalTest/>*/}
       {/*github profile finder component*/}
-      <GithubProfileFinder/>
+      {/*<GithubProfileFinder/>*/}
+      {/* search suto complete component */}
+      <SearchAutoComplete/>
     </div>
   );
 }
