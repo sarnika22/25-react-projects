@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import User from "./user";
+import "./style.css";
 
 export default function GithubProfileFinder() {
   const [username, setUsername] = useState("sarnika22");
@@ -16,7 +17,7 @@ export default function GithubProfileFinder() {
       setLoading(false);
       setUsername("");
     }
-    console.log(data);
+
   }
 
   function handleSubmit()
@@ -38,7 +39,7 @@ export default function GithubProfileFinder() {
         <input
           type="text"
           name="search by username"
-          placeholder="github username"
+          placeholder="github username.."
           value={username}
           onChange={(event) => setUsername(event.target.value)}
         />
