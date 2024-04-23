@@ -20,8 +20,13 @@ export default function TicTacToe() {
           [0, 4, 8],
           [2, 4, 6],
         ]
-       
-        return null;
+       for(let i=0; i<winningPatterns.length; i++) {
+         const [a, b, c] = winningPatterns[i];
+         if(squares[a] && squares[a] === squares[b] && squares[a] === squares[c])
+          {
+           return squares[a];
+         }
+         return null;
     }
 
     function handleClick(getCurrentSquare) {
@@ -31,6 +36,8 @@ export default function TicTacToe() {
         setXIsNext(!xIsNext);
         setSquares(cpySquares);
     }
+    
+
 
   return (
     <div className="tic-tac-toe-container">
@@ -51,4 +58,5 @@ export default function TicTacToe() {
       </div>
     </div>
   );
+}
 }
