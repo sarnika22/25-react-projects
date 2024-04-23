@@ -66,8 +66,10 @@ export default function SearchAutoComplete() {
           name="search"
           onChange={handleChange}
         />
+      )}{" "}
+      {showDropdown && (
+        <Suggestions handleClick={handleClick} data={filteredUser} />
       )}
-      {showDropdown && <Suggestions hanldeClick={handleClick} data={filteredUser} />}
     </div>
   );
 }
