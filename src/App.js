@@ -1,6 +1,8 @@
 import './App.css';
+import FeatureFlagGlobalState from './components/feature-flag/context';
+import FeatureFlag from './components/feature-flag';
 //import SearchAutoComplete from './components/search-autocomplete';
-import TicTacToe from './components/tictactoe';
+//import TicTacToe from './components/tictactoe';
 //import ModalTest from './components/custom-modal-popup/modal-test';
 //import TabTest from './components/custom-tabs/tab-test';
 //import Tabs from './components/custom-tabs/tabs';
@@ -21,37 +23,55 @@ function App() {
     <div className="App">
       {/* accordion component */}
       {/*<Accordion/>*/}
+
       {/* random color component */}
       {/*<RandomColor/>*/}
+
       {/* star rating component */}
       {/*<StarRating noOfStars={10}/>*/}
+
       {/* image slider component */}
       {/*<ImageSlider 
       url={"https://picsum.photos/v2/list"}
       page={'1'}
       limit={'4'}/>*/}
+
       {/* load more data component */}
       {/*<LoadMore/>*/}
+
       {/*Tree view component or menu UI component/>*/}
       {/*<TreeView menus={menus}/>*/}
+
       {/* QR code generator component */}
       {/*<QrCodeGenerator/>*/}
+
       {/*Light & Dark mode component*/}
       {/*<LightDarkMode/>*/}
+
       {/* scroll indicator component */}
       {/*<ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>*/}
+
       {/* custom tab component*/}
       {/*<TabTest/>*/}  
+
       {/*custom modal component*/}
       {/*<ModalTest/>*/}
+
       {/*github profile finder component*/}
       {/*<GithubProfileFinder/>*/}
+
       {/* search suto complete component */}
       {/*<SearchAutoComplete/>*/}
+       
       {/* tictactoe component */}
-      <TicTacToe/>
+      {/*<TicTacToe/>*/}
+
+      {/* feature flag implementation component */}
+      <FeatureFlagGlobalState>
+        <FeatureFlag/>
+      </FeatureFlagGlobalState>
+      
     </div>
   );
 }
-
 export default App;
