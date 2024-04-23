@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Suggestions from "./suggestions";
 
 export default function SearchAutoComplete() {
   const [loading, setLoading] = useState(false);
@@ -17,18 +18,23 @@ export default function SearchAutoComplete() {
         user && user.length
           ? user.filter((item) => item.toLowerCase().indexOf(query) > -1)
           : [];
-          setfilteredUser(filteredData);
-          setShowDropdown(true); 
-    }else{
-        setShowDropdown(false);
+      setfilteredUser(filteredData);
+      setShowDropdown(true);
+    } else {
+      setShowDropdown(false);
     }
+  }
+
+  function handleClick(event) {
+    setShowDropdown(false);
+    setSearchParam(event.target.innerText);
+    setfilteredUser([]);
   }
   async function fetchListOfUsers() {
     try {
       const response = await fetch("https://dummyjson.com/users");
       const data = await response.json();
 
-      console.log(data);
       if (data && data.users && data.users.length) {
         setUser(data.users.map((userItem) => userItem.firstName));
         setLoading(false);
@@ -50,13 +56,18 @@ export default function SearchAutoComplete() {
 
   return (
     <div className=".search-autocomplete-container">
-      <input
-        value={searchParam}
-        type="text"
-        placeholder="Search..."
-        name="search"
-        onChange={handleChange}
-      />
+      {loading ? (
+        <h1>Loading! Please wait</h1>
+      ) : (
+        <input
+          value={searchParam}
+          type="text"
+          placeholder="Search..."
+          name="search"
+          onChange={handleChange}
+        />
+      )}
+      {showDropdown && <Suggestions hanldeClick={handleClick} data={filteredUser} />}
     </div>
   );
 }
