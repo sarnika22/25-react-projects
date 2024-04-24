@@ -5,7 +5,7 @@ export const FeatureFlagContext = createContext(null);
 
 export default function FeatureFlagGlobalState({ children }) {
   const [loading, setLoading] = useState(false);
-  const [enabledFlag, setEnabledFlag] = useState(null);
+  const [enabledFlag, setEnabledFlag] = useState({});
 
   async function fetchFeatureFlag() {
     try {
@@ -22,7 +22,7 @@ export default function FeatureFlagGlobalState({ children }) {
   }
   useEffect(() => {
     fetchFeatureFlag();
-  });
+  },[]);
 
   return (  
     <FeatureFlagContext.Provider value={{loading, enabledFlag}}>

@@ -67,10 +67,10 @@ function App() {
       {/* {<TicTacToe/>} */}
 
       {/* feature flag implementation component */}
-      <FeatureFlagGlobalState>
+      {/* <FeatureFlagGlobalState>
         <FeatureFlag/>
       </FeatureFlagGlobalState>
-      
+       */}
     </div>
   );
 }
