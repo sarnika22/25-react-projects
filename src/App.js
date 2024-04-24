@@ -17,6 +17,7 @@ import menus from './components/tree-view/data';
 //import StarRating from './components/star-rating';
 import Accordion from './components/accordion';
 import RandomColor from './components/random-color';
+import UseFetchHookTest from './components/use-fetch/test';
 
 function App() {
   return (
@@ -71,6 +72,9 @@ function App() {
         <FeatureFlag/>
       </FeatureFlagGlobalState>
        */}
+
+       {/* use fetch component */}
+       <UseFetchHookTest/>
     </div>
   );
 }
