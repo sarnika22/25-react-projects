@@ -19,6 +19,7 @@ import Accordion from './components/accordion';
 import RandomColor from './components/random-color';
 import UseFetchHookTest from './components/use-fetch/test';
 import UseOnclickOutsideTest from './components/use-outside-click/test';
+import UseWindowResizeTest from './components/use-window-resize/test';
 
 function App() {
   return (
@@ -78,7 +79,10 @@ function App() {
        {/* <UseFetchHookTest/> */}
 
        {/* use outside click component */}
-       <UseOnclickOutsideTest/>
+       {/* <UseOnclickOutsideTest/> */}
+
+       {/* use window resize component */}
+       <UseWindowResizeTest/>
     </div>
   );
 }
