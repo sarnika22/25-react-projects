@@ -20,7 +20,7 @@ import RandomColor from './components/random-color';
 import UseFetchHookTest from './components/use-fetch/test';
 import UseOnclickOutsideTest from './components/use-outside-click/test';
 import UseWindowResizeTest from './components/use-window-resize/test';
-import ScrollToTopAndBottom from './components/scroll-to-top-bottom';
+import ScrollToSection from './components/use-fetch/scroll-to-section';
 
 function App() {
   return (
@@ -86,7 +86,8 @@ function App() {
        {/* <UseWindowResizeTest/> */}
 
        {/* Scroll to top and bottom component */}
-       <ScrollToTopAndBottom/>
+       {/* <ScrollToTopAndBottom/> */}
+       <ScrollToSection/>
     </div>
   );
 }
